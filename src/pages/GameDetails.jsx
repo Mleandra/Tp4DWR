@@ -1,7 +1,7 @@
-import {useState, useEffect} from 'react';
-import axios from 'axios';
-import {useParams} from 'react-router-dom';
-import Navigation from '../components/Navigation';
+import {useState, useEffect} from "react";
+import axios from "axios";
+import {useParams} from "react-router-dom";
+import Navigation from "../components/Navigation";
 
 const GameDetails = () => {
     const {id} = useParams();
@@ -12,8 +12,8 @@ const GameDetails = () => {
             try {
                 const response = await axios.get(`https://mmo-games.p.rapidapi.com/game?id=${id}`, {
                     headers: {
-                        'X-RapidAPI-Key': 'ab3b36b054msh54e7eb81ef7623dp16ce21jsndfb2a9c5b829',
-                        'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
+                        "X-RapidAPI-Key": "ab3b36b054msh54e7eb81ef7623dp16ce21jsndfb2a9c5b829",
+                        "X-RapidAPI-Host": "mmo-games.p.rapidapi.com"
                     }
                 });
                 setGame(response.data);
@@ -31,7 +31,7 @@ const GameDetails = () => {
     }
 
     return (
-        <div className='bg-white pb-4'>
+        <div className="bg-white pb-4">
             <Navigation/>
             <div className="container mx-auto my-3 lg:px-32 lg:pt-12 overflow-hidden">
                 <div className="flex flex-col md:flex-row">
@@ -48,8 +48,7 @@ const GameDetails = () => {
                         <h2 className="text-4xl text-blue-500 font-bold mb-4">
                             {
                             game.title
-                        }</h2>
-
+                        } </h2>
                         <p className="text-gray-700">Genre: {
                             game.genre
                         }</p>
@@ -65,36 +64,38 @@ const GameDetails = () => {
                         <p className="text-gray-700">Release Date: {
                             game.release_date
                         }</p>
-
                         {
                         game.minimum_system_requirements && (
                             <div className="mt-4">
-                                <h3 className="text-2xl font-bold mb-2">System Minimum Requirements</h3>
+                                <h3 className="text-2xl font-bold mb-2">
+                                    System Minimum Requirements
+                                </h3>
                                 <ul className="list-disc pl-6">
                                     <li className="text-gray-700">
                                         {
                                         game.minimum_system_requirements.os
-                                    }</li>
+                                    } </li>
                                     <li className="text-gray-700">
                                         {
                                         game.minimum_system_requirements.processor
-                                    }</li>
+                                    } </li>
                                     <li className="text-gray-700">
                                         {
                                         game.minimum_system_requirements.memory
-                                    }</li>
+                                    } </li>
                                     <li className="text-gray-700">
                                         {
                                         game.minimum_system_requirements.graphics
-                                    }</li>
+                                    } </li>
                                     <li className="text-gray-700">
                                         {
                                         game.minimum_system_requirements.storage
-                                    }</li>
+                                    } </li>
                                 </ul>
                             </div>
                         )
-                    } </div>
+                    }
+                        {" "} </div>
                 </div>
 
                 <div className="mt-4">
@@ -105,7 +106,7 @@ const GameDetails = () => {
                     }</p>
                 </div>
 
-                <div className='mt-4'>
+                <div className="mt-4">
                     <a aria-label="Accéder à la page  du  jeu . cette page est hors de notre site"
                         href={
                             game.game_url
@@ -134,7 +135,8 @@ const GameDetails = () => {
                                     }/>
                             </div>
                         ))
-                    } </div>
+                    }
+                        {" "} </div>
                 </div>
             </div>
         </div>
