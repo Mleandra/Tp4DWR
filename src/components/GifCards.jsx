@@ -33,11 +33,13 @@ const GifCards = ({game}) => {
                 } </span>
             } </div>
             <div className='px-3 py-4 flex justify-center'>
-                <a href={
+                <a aria-label="Accéder à la page donnant l'acces au cadeau"
+                    href={
                         game.giveaway_url
                     }
                     className="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg mb-4">
                     Take It
+
                 </a>
             </div>
         </div>

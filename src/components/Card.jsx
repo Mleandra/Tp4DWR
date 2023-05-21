@@ -2,7 +2,7 @@ const Card = ({game}) => {
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-200">
 
-            <img className=""
+            <img className="w-full"
                 src={
                     game.thumbnail
                 }

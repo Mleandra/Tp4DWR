@@ -106,7 +106,8 @@ const GameDetails = () => {
                 </div>
 
                 <div className='mt-4'>
-                    <a href={
+                    <a aria-label="Accéder à la page  du  jeu . cette page est hors de notre site"
+                        href={
                             game.game_url
                         }
                         className="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg mb-4">
